@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  MemeMe2
+//  MemeMe
 //
-//  Created by Paul Miller on 9/09/2015.
+//  Created by Paul Miller on 20/03/2015.
 //  Copyright (c) 2015 PoneTeller. All rights reserved.
 //
 
@@ -12,8 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //MARK: - Shared storage properties
+    //Shared temporary storage of memes and a flag for showing a label
+    //in SentMemesDetailViewController.
+    
+    var memes = [Meme]()
+    var shouldShowLabel = true
 
-
+    //MARK: -
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
