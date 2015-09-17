@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SentMemesCollectionViewController: UICollectionViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class SentMemesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     //MARK: - Properties
     

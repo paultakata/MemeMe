@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SentMemesTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class SentMemesTableViewController: UITableViewController {
 
     //MARK: - Properties
     

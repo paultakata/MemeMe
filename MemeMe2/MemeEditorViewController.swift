@@ -95,11 +95,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     //MARK: Touch responder
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
+        super.touchesBegan(touches, withEvent: event)
         //Hide the keyboard if the user touches anywhere
         //outside the keyboard area.
-        let touch = touches.first as! UITouch
+        let touch = touches.first!
         
         if touch.phase == UITouchPhase.Began {
             
@@ -218,8 +219,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func saveMeme() {
         
         //Create a new meme object and add it to the shared storage.
-        let meme = Meme(topText: topTextField.text,
-            bottomText: bottomTextField.text,
+        let meme = Meme(topText: topTextField.text!,
+            bottomText: bottomTextField.text!,
             originalImage: self.memeImageView.image!,
             memedImage: self.memedImage!)
         
@@ -243,14 +244,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         self.bottomToolbar.hidden = false
         
         //Crop the image to get rid of the extremely annoying status bar.
-        let croppedImage = CGImageCreateWithImageInRect(memedImage.CGImage, self.memeImageView.frame)
+        let croppedImage = CGImageCreateWithImageInRect(memedImage.CGImage, self.memeImageView.frame)!
         
-        return UIImage(CGImage: croppedImage)!
+        return UIImage(CGImage: croppedImage)
     }
 
     //MARK: - UIImagePickerControllerDelegate
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         //If user has picked an image, put it in the imageView and dismiss the image picker.
         if let newImage = info[UIImagePickerControllerEditedImage] as? UIImage {

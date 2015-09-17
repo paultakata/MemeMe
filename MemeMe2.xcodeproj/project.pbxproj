@@ -19,7 +19,6 @@
 		B6BE75D21B9FD10A00C0D2A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BE75C61B9FD10A00C0D2A9 /* Images.xcassets */; };
 		B6BE75D31B9FD10A00C0D2A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BE75C71B9FD10A00C0D2A9 /* LaunchScreen.xib */; };
 		B6BE75D41B9FD10A00C0D2A9 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6BE75C81B9FD10A00C0D2A9 /* Impact.ttf */; };
-		B6BE75D51B9FD10A00C0D2A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6BE75C91B9FD10A00C0D2A9 /* Info.plist */; };
 		B6BE75D71B9FD12000C0D2A9 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE75D61B9FD12000C0D2A9 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
@@ -212,7 +211,8 @@
 		B6BE75901B9FD0C200C0D2A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = PoneTeller;
 				TargetAttributes = {
 					B6BE75971B9FD0C200C0D2A9 = {
@@ -251,7 +251,6 @@
 				B6BE75D41B9FD10A00C0D2A9 /* Impact.ttf in Resources */,
 				B6BE75D11B9FD10A00C0D2A9 /* Main.storyboard in Resources */,
 				B6BE75D31B9FD10A00C0D2A9 /* LaunchScreen.xib in Resources */,
-				B6BE75D51B9FD10A00C0D2A9 /* Info.plist in Resources */,
 				B6BE75D21B9FD10A00C0D2A9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +320,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -388,6 +388,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MemeMe2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poneteller.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MemeMe2/MemeMe2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -401,6 +402,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MemeMe2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poneteller.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MemeMe2/MemeMe2-Bridging-Header.h";
 			};
@@ -420,6 +422,7 @@
 				);
 				INFOPLIST_FILE = MemeMe2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poneteller.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemeMe2.app/MemeMe2";
 			};
@@ -435,6 +438,7 @@
 				);
 				INFOPLIST_FILE = MemeMe2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poneteller.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemeMe2.app/MemeMe2";
 			};
@@ -459,6 +463,7 @@
 				B6BE75B91B9FD0C200C0D2A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6BE75BA1B9FD0C200C0D2A9 /* Build configuration list for PBXNativeTarget "MemeMe2Tests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +472,7 @@
 				B6BE75BC1B9FD0C200C0D2A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

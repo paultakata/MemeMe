@@ -39,7 +39,7 @@ class SentMemesDetailViewController: UIViewController {
             longPressLabel.alpha = 1.0
             UIView.animateWithDuration(1.0,
                 delay: 1.0,
-                options: nil,
+                options: [],
                 animations: {self.longPressLabel.alpha = 0.0},
                 completion: nil)
             
